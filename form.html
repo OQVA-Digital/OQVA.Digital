@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OQVA Digital</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form_body">
+
+    <section class="intro_sec">
+        <div class="container">
+            <div>
+                <img class="logo" src="assets/logo w.svg" alt="logo OQVA" draggable="false" oncontextmenu="return false">
+                <h1>This document will aid us in developing a clear understanding of your vision for this video.</h1>
+                <a href="#briefing-form">Let's start</a>
+            </div>
+        </div>
+        <div class="graphic01"></div>
+    </section>
+
+    <section class="form_section">
+
+        <div class="graphic02"></div>
+        <div class="graphic03"></div>
+        <div class="graphic04"></div>
+        <div class="graphic05"></div>
+
+        <form name="contact" method="POST" data-netlify="true" id="briefing-form">
+            <div class="primary_inputs">
+                <div class="row_inputs">
+                    <p>
+                        <label>
+                            <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="first-name" id="first-name-id" required/>
+    
+                            <span class="over_label">First name</span>
+                        </label>
+                    </p>
+    
+                    <p>
+                        <label>
+                            <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="surname" required/>
+    
+                            <span class="over_label">Surname</span>
+                        </label>
+                    </p>
+                </div>
+
+                <p>
+                    <label>
+                        <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="company-name" required/>
+
+                        <span class="over_label">Company</span>
+                    </label>
+                </p>
+            </div>
+
+            <span class="divider_info">Don't skimp on information. Fill in the columns and press 'submit' when you're sure.</span>
+
+            <div class="input_boxes_ctnr">
+                <p>
+                    <label>
+                        <span><b>1.</b> What are you using this content for?</span>
+                        
+                        <textarea name="01-what-are-you-using-this-content-for" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>2.</b> What is important to you from this content?</span> 
+                        
+                        <textarea name="02-what-is-important-to-you-from-this-content" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>3.</b> What are you looking to achieve with this content?</span> 
+                        
+                        <textarea name="03-what-are-you-looking-to-achieve-with-this-content" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>4.</b> What is the message you want to relay to the audience?</span> 
+                        
+                        <textarea name="04-what-is-the-message-you-want-to-relay-to-the-audience" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>5.</b> What is the one action you want the audience to take from the video?</span> 
+                        
+                        <textarea name="05-what-is-the-one-action-you-want-the-audience-to-take-from-the-video" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>6.</b> What platforms will you be using this video for?</span> 
+                        
+                        <textarea name="06-what-platforms-will-you-be-using-this-video-for" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>7.</b> How long do you want the video to be?</span> 
+                        
+                        <textarea name="07-how-long-do-you-want-the-video-to-be" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+            </div>
+
+            <p>
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+    </section>
+
+    <script>
+        const handleSubmit = (e) => {
+        e.preventDefault();
+        let myForm = document.getElementById("briefing-form");
+        let formData = new FormData(myForm);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => success())
+            .catch((error) => alert(error));
+        };
+
+        function success() {
+            document.querySelector('.form_body button[type=submit]').innerHTML = 'Form successfully submitted!';
+
+        }
+
+        document.querySelector("form").addEventListener("submit", handleSubmit);
+
+
+
+
+        // const firstNameInput = document.getElementById('first-name-id')
+
+        // firstNameInput.oninput = function() {
+        //     localStorage.setItem('firstNameSaved', firstNameInput.getAttribute('value'));
+
+        //     console.log(firstNameInput.getAttribute('value'))
+        // }
+
+        // // let someData = 'The data that I want to store for later.';
+        // // localStorage.setItem('myDataKey', someData);
+
+        
+        // window.onload = function() {
+        //     // firstNameInput.value = localStorage.getItem('myDataKey');
+        // }
+    </script>
+</body>
+</html>
