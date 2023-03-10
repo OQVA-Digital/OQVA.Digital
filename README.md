@@ -1,2 +1,2 @@
 # OQVA.Digital
-https://oqva-digital.github.io/OQVA.Digital/protected/NOCA.html
+https://oqva-digital.github.io/OQVA.Digital/lp/e-book/index.html
