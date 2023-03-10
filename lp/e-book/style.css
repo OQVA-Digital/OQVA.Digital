@@ -1,0 +1,363 @@
+.cursor {
+    width: 7rem;
+    height: 7rem;
+    border: 1rem solid #fff;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* will-change: transform; */
+    filter: drop-shadow(0 -0.1rem var(--dark1));
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    box-sizing: border-box;
+} .cursor div {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+:root {
+    --light:#ffffff;
+    --dark1: #111111;
+    --dark2: #212121;
+    --dark3:#30302d;
+    --c1:#d1cb03;
+
+    --width1: clamp(13rem, 85vw, 91rem);
+    --width2: clamp(13rem, 85vw, 135rem);
+
+    --mask-distance:10rem;
+ }
+
+
+html, body, p, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+}
+
+@font-face {
+    font-family: BrilkSans;
+    src: url("../../assets/e-book/BRILK-SANS-LIGHT.TTF");
+    font-weight: 200;
+}  @font-face {
+    font-family: BrilkSans;
+    src: url("../../assets/e-book/BRILK-EXTRABLACK.TTF");
+    font-weight: 800;
+}
+
+::selection {
+    background-color:var(--dark1);
+    color:var(--light);
+}
+
+html {
+    font-size:10px;
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+} body {
+    color:white;
+    font-size: clamp(1rem, 3.8vw, 2.2rem);
+    background-color: var(--dark1);
+    font-family: 'BrilkSans', sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+    color:unset;
+}
+
+img {
+    user-select: none;
+    max-width: 100%;
+}
+
+body:not(.lp_body)::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+body:not(.lp_body)::-webkit-scrollbar-track {
+    background: var(--dark1);
+}
+/* Handle */
+body:not(.lp_body)::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+
+.mobile_hidden {
+    display:none;
+}
+
+.cta {
+    background-color: var(--dark1);
+    padding: 1.5rem 1.6rem 1rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--light);
+    border-radius: 0.5rem;
+    line-height: 1;
+    font-size: 2rem;
+    border: 0.2rem solid var(--dark2);
+    /* box-shadow: 0 1rem 1rem -0.6rem #3338; */
+    position: sticky;
+    bottom: 4rem;
+    box-sizing: border-box;
+}
+
+section.bgimg {
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+} .sec02 .ctnr, .sec03 .ctnr, .sec04 .ctnr, .sec06 .ctnr, .sec08 .ctnr {
+    width:var(--width1);
+    margin: 0 auto;
+}
+
+
+.bgimg.sec01 {
+    height: clamp(40rem, 120vw, 91vh);
+    background-position: bottom;
+    background-image: url(../../assets/e-book/bg01.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg01.jpg) 1x, url(../../assets/e-book/bg01.webp) 1x);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6rem 6rem 1rem #191919;
+    z-index: 9;
+} .sec01 p {
+    font-size: clamp(1rem, 22vw, 35rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: clamp(0.5rem, 2vw, 4rem);
+}
+
+.bgimg.sec02 {
+    background-image: url(../../assets/e-book/bg01-stretched.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg01-stretched.jpg) 1x, url(../../assets/e-book/bg01-stretched.webp) 1x);
+    background-attachment: fixed;
+    z-index: 8;
+} .sec02 {
+    padding: clamp(5rem, 24vw, 16rem) 0 clamp(5rem, 15vw, 12rem) 0;
+} .sec02 span.big {
+    font-size: clamp(2.4em, 3vw, 3em);
+    margin: clamp(3rem, 10vw, 8rem) auto;
+    width: 90%;
+    max-width: 60rem;
+}
+
+.sec03 p, .sec05 p, .sec08 p {
+    text-shadow: 0.2rem 0.2rem var(--dark1);
+    /* filter: drop-shadow(0.2rem 0.4rem 0.5rem var(--dark1)); */
+    /* margin-top: 4rem; */
+}
+
+p span.big {
+    font-size: 2em;
+    display: block;
+    line-height: 1.4;
+    letter-spacing: 0.2rem;
+} p span.right {
+    text-align: right;
+    display: block;
+    max-width: 54rem;
+    margin: 0 0 0 auto;
+} p span.left {
+    text-align: left;
+    display: block;
+    max-width: 52rem;
+}
+
+
+.bgimg.sec03 {
+    background-image: url(../../assets/e-book/bg02.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg02.jpg) 1x, url(../../assets/e-book/bg02.webp) 1x);
+    background-position: bottom;
+    -webkit-mask-image: linear-gradient(0deg, transparent, white calc(0% + var(--mask-distance)));
+    z-index: 8;
+} .sec03 {
+    padding: clamp(5rem, 33vw, 20rem) 0;
+} .sec03 span.big {
+    font-size: clamp(7em, 15vw, 13em);
+    text-transform: uppercase;
+    letter-spacing: clamp(0.5rem, 2vw, 4rem);
+    text-align: center;
+    margin: 2rem 0;
+    mix-blend-mode: difference;
+}
+
+
+.bgimg.sec04 {
+    background-image: url(../../assets/e-book/bg02-stretched.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg02-stretched.jpg) 1x, url(../../assets/e-book/bg02-stretched.webp) 1x);
+    background-attachment: fixed;
+    background-position: top;
+    text-align: center;
+    margin-top: calc(var(--mask-distance) * -1);
+} .sec04 span.big {
+
+} .sec04 {
+    padding: calc(clamp(5rem, 30vw, 20rem) + 4rem) 0 clamp(5rem, 50vw, 45rem) 0;
+}
+
+
+.bgimg.sec05 {
+    background-image: url(../../assets/e-book/bg03.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg03.jpg) 1x, url(../../assets/e-book/bg03.webp) 1x);
+    background-position: top right;
+} .sec05 {
+    padding: clamp(5rem, 63vw, 20rem) 0;
+    z-index: 1;
+} .sec05 .ctnr {
+    width:var(--width2);
+    margin: 0 auto;
+    position: relative;
+} .sec05 span.big {
+    font-size: clamp(2em, 15vw, 7.5em);
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: calc(clamp(7rem, 57vw, 44rem) * -1);
+    max-width: 90rem;
+    margin-bottom: 3rem;
+    letter-spacing: clamp(0.8rem, 2vw, 2rem);
+} .sec05 .left, .sec05 .right {margin-top: 3rem;} .sec05 .cta, .sec03 .cta {margin: 2rem 0 0 auto;display: table;}
+
+
+
+.bgimg.sec06 {
+    background-image: url(../../assets/e-book/bg04.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg04.jpg) 1x, url(../../assets/e-book/bg04.webp) 1x);
+    background-attachment: fixed;
+    /* -webkit-mask-image: linear-gradient(180deg, transparent, white calc(0% + var(--mask-distance))); */
+    /* margin-top: calc(var(--mask-distance) * -1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} .sec06 {
+    height: 100vh;
+    display: flex;
+} .sec06 p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    letter-spacing: 0.3rem;
+    position: relative;
+    top: calc(clamp(0rem, calc(20vw - 10rem), 15rem) * -1);
+} .sec06 span.big {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 12vw, 12rem);
+    transform: translateY(15%);
+    letter-spacing: clamp(0.5rem, 1vw, 1rem);
+}
+
+
+.sec07 {
+    background-color: #EEE;
+    color: var(--dark1);
+    padding: clamp(5rem, 13vw, 7rem) 0 clamp(5rem, 13vw, 7rem) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+} .sec07 p {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    justify-content: center;
+    align-items: center;
+} .sec07 span.big {
+    font-size: clamp(7rem, 35vw, 23rem);
+    line-height: 1;
+    margin-top: calc(clamp(22rem, 61vw, 38rem) * -1);
+    mix-blend-mode: difference;
+    color: white;
+    text-transform: uppercase;
+    max-width: 60rem;
+}
+
+.sec07 .ctnr {
+    width: var(--width2);
+    margin: 0 auto;
+}
+
+
+
+.bgimg.sec08 {
+    background-image: url(../../assets/e-book/bg05.jpg);
+    background-image: -webkit-image-set(url(../../assets/e-book/bg05.jpg) 1x, url(../../assets/e-book/bg05.webp) 1x);
+    display: flex;
+    background-position: top;
+} .sec08 {
+    /* padding: clamp(5rem, 33vw, 20rem) 0; */
+    /* height: 140vh; */
+    padding: 32rem 0 4rem;
+} .sec08 p {font-size: 1.2em;} .sec08 span.big {
+    font-size: clamp(3.7em, 10vw, 5em);
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 75rem;
+    letter-spacing: 1rem;
+    margin-bottom: 8rem;
+    mix-blend-mode: exclusion;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 62vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} .logo_anchor {
+    
+width: clamp(15rem, 62vw, 35rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1300px) {
+
+    .sec07 p {
+        flex-direction: row;
+    } .sec07 .left {
+        max-width: 40rem;
+    }
+
+    .sec08 span.big {
+        position: relative;
+        left: 20vw;
+    }
+
+    .sec01 p {
+        mix-blend-mode: overlay;
+        text-shadow: 0 2rem 8rem black;
+    }
+}
