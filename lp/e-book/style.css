@@ -119,7 +119,7 @@ section.bgimg {
     font-size: clamp(4rem, 22vw, 21rem);
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: clamp(0.5rem, 2vw, 4rem);
+    letter-spacing: clamp(0.5rem, 2vw, 1rem);
 }
 
 .bgimg.sec02 {
@@ -276,14 +276,14 @@ p span.big {
 } .sec08 {
     /* padding: clamp(5rem, 33vw, 20rem) 0; */
     /* height: 140vh; */
-    padding: 19rem 0 3rem;
+    padding: 15rem 0 5rem;
 } .sec08 p {font-size: 1.2em;} .sec08 span.big {
     font-size: clamp(3.7em, 19vw, 5em);
     line-height: 1.1;
     text-transform: uppercase;
     max-width: 50rem;
     letter-spacing: 0.6rem;
-    margin-bottom: 5rem;
+    margin: 4rem 0 5rem;
     mix-blend-mode: exclusion;
 }
 
@@ -354,8 +354,11 @@ footer {
         mix-blend-mode: overlay;
         text-shadow: 0 2rem 8rem black;
     } .sec07 span.big {
-        font-size: clamp(6.2rem, 16vw, 14rem);
-        margin-top: calc(clamp(9rem, 30vw, 25rem) * -1);
-        max-width: 37rem;
+        
+font-size: clamp(6.2rem, 16vw, 14rem);
+        
+margin-top: calc(clamp(9rem, 30vw, 25rem) * -1);
+        
+max-width: 37rem;
     }
 }
