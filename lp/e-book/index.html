@@ -9,6 +9,9 @@
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../styles/contact-form.css">
+
+    <script src="../../scripts/form-modal.js" defer></script>
 </head>
 <body>
 
@@ -33,13 +36,14 @@
 
     <section class="bgimg sec03">
         <div class="ctnr">
-            <p>The first thing you notice is the sheer amount of
+            <p>
+                <span class="txtshadow">The first thing you notice is the sheer amount of</span>
     
                 <span class="big">detail</span>
                 
-                <span class="right">that goes into creating your identity. Every decision you make, from the food you eat to the clothes you wear, is a deliberate and purposeful choice, one that will shape the way others see you. It's like building a sculpture, slowly chipping away at the excess until all that remains is a work of art that reflects your true self.</span>
+                <span class="right txtshadow">that goes into creating your identity. Every decision you make, from the food you eat to the clothes you wear, is a deliberate and purposeful choice, one that will shape the way others see you. It's like building a sculpture, slowly chipping away at the excess until all that remains is a work of art that reflects your true self.</span>
             </p>
-            <a class="cta">Book a Free Consultation</a>
+            <a class="cta contact_bt">Book a Free Consultation</a>
         </div>
     </section>
 
@@ -53,11 +57,11 @@
         <div class="ctnr">
             <p>
                 <span class="big">Exploring this universe,</span>
-                <span class="left">you begin to see the world around you in a new light. You notice how others are struggling to find their own identities, how they're buffeted by the winds of circumstance and the expectations of others; and you realise that the price to pay for ultimate freedom is the bravery required to pursue it.</span>
+                <span class="left txtshadow">you begin to see the world around you in a new light. You notice how others are struggling to find their own identities, how they're buffeted by the winds of circumstance and the expectations of others; and you realise that the price to pay for ultimate freedom is the bravery required to pursue it.</span>
             </p>
     
-            <p><span class="right">There may be times when the weight of your own expectations can feel crushing, when you question whether you're really living up to your true potential. But even in those moments, there's a sense of excitement, of possibility, of knowing that you're on a journey of self-discovery that will never truly be complete.</span></p>
-            <a class="cta">Book a Free Consultation</a>
+            <p><span class="right txtshadow">There may be times when the weight of your own expectations can feel crushing, when you question whether you're really living up to your true potential. But even in those moments, there's a sense of excitement, of possibility, of knowing that you're on a journey of self-discovery that will never truly be complete.</span></p>
+            <a class="cta contact_bt">Book a Free Consultation</a>
         </div>
     </section>
 
@@ -73,7 +77,7 @@
                 <span class="big">All of us have.</span>
                 <span>
                     <span class="left">But from this moment you have something that many others don't - agency, the power to create your own destiny.</span>
-                    <a class="cta">Book a Free Consultation</a>
+                    <a class="cta contact_bt">Book a Free Consultation</a>
                 </span>
             </p>
         </div>
@@ -85,7 +89,7 @@
                 <span class="big">So come on in, take a closer look.</span>
                 It's not for the faint of heart, but for those who are brave enough to take the leap, it's an adventure that will last a lifetime.
             </p>
-            <a class="cta">Book a Free Consultation</a>
+            <a class="cta contact_bt">Book a Free Consultation</a>
         </div>
     </section>
 
@@ -95,17 +99,37 @@
         </a>
     </footer>
 
-        <script>
-            const cursorRounded = document.querySelector('.cursor');
-    
-            const moveCursor = (e)=> {
-                const mouseY = e.clientY;
-                const mouseX = e.clientX;
-                
-                cursorRounded.style.transform = `translate3d(${mouseX - 25}px, ${mouseY - 25}px, 0)`;
-            }
-    
-            window.addEventListener('mousemove', moveCursor)
-        </script>
+
+    <div class="form_ctnr">
+        <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label>Your Name: <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+        </form>
+    </div>
+
+    <div class="out_area" title="close"></div>
+
+    <script>
+        const cursorRounded = document.querySelector('.cursor');
+
+        const moveCursor = (e)=> {
+            const mouseY = e.clientY;
+            const mouseX = e.clientX;
+            
+            cursorRounded.style.transform = `translate3d(${mouseX - 32}px, ${mouseY - 32}px, 0)`;
+        }
+
+        window.addEventListener('mousemove', moveCursor)
+    </script>
 </body>
 </html>
