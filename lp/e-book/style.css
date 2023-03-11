@@ -83,7 +83,7 @@ body:not(.lp_body)::-webkit-scrollbar-thumb {
     border-radius: 0.3rem;
     line-height: 1;
     font-size: clamp(1rem, 4.4vw, 1.2rem);
-    border: 0.2rem solid var(--dark2);
+    border: 0.1rem solid var(--dark2);
     /* box-shadow: 0 1rem 1rem -0.6rem #3338; */
     position: sticky;
     bottom: 1.5rem;
@@ -101,7 +101,7 @@ section.bgimg {
     margin: 0 auto;
 }
 
-.txtshadow {text-shadow: 0 0.2rem var(--dark1), 0 -0.2rem var(--dark1), -0.2rem 0 var(--dark1), 0.2rem 0 var(--dark1);filter: drop-shadow(0 0 0.8rem var(--dark1));}
+.txtshadow {text-shadow: 0 0.1rem var(--dark1), 0 -0.1rem var(--dark1), -0.1rem 0 var(--dark1), 0.1rem 0 var(--dark1);filter: drop-shadow(0 0 0.3rem var(--dark1));}
 
 .bgimg.sec01 {
     height: clamp(40rem, 160vw, 91vh);
@@ -181,7 +181,7 @@ p span.big {
 } .sec04 span.big {
 
 } .sec04 {
-    padding: calc(clamp(5rem, 30vw, 20rem) + 4rem) 0 clamp(5rem, 50vw, 45rem) 0;
+    padding: calc(clamp(5rem, 30vw, 10rem) + 4rem) 0 clamp(5rem, 50vw, 35rem) 0;
 }
 
 
@@ -190,7 +190,7 @@ p span.big {
     background-image: -webkit-image-set(url(../../assets/e-book/bg03.jpg) 1x, url(../../assets/e-book/bg03.webp) 1x);
     background-position: top right;
 } .sec05 {
-    padding: clamp(5rem, 63vw, 20rem) 0;
+    padding: clamp(5rem, 63vw, 12rem) 0;
     z-index: 1;
 } .sec05 .ctnr {
     width:var(--width2);
@@ -200,7 +200,7 @@ p span.big {
     font-size: clamp(2em, 15vw, 7.5em);
     line-height: 1;
     text-transform: uppercase;
-    margin-top: calc(clamp(7rem, 85vw, 44rem) * -1);
+    margin-top: calc(clamp(7rem, 85vw, 28rem) * -1);
     max-width: 60rem;
     margin-bottom: 3rem;
     letter-spacing: clamp(0.2rem, 2vw, 1rem);
@@ -252,13 +252,13 @@ p span.big {
     justify-content: center;
     align-items: center;
 } .sec07 span.big {
-    font-size: clamp(5rem, 35vw, 14rem);
+    font-size: clamp(6.2rem, 16vh, 9rem);
     line-height: 1;
-    margin-top: calc(clamp(17rem, 61vw, 26rem) * -1);
+    margin-top: calc(clamp(9rem, 30vh, 17rem) * -1);
     mix-blend-mode: difference;
     color: white;
     text-transform: uppercase;
-    max-width: 37rem;
+    max-width: 42rem;
 }
 
 .sec07 .ctnr {
@@ -323,7 +323,7 @@ footer {
         display: flex;
         width: 4rem;
         height: 4rem;
-        border: 0.5rem solid #fff;
+        border: 0.25rem solid #fff;
         border-radius: 50%;
         position: fixed;
         z-index: 12;
@@ -333,20 +333,11 @@ footer {
         pointer-events: none;
         box-sizing: border-box;
     } .cursor div {
-        width: 1rem;
-        height: 1rem;
+        width: 0.5rem;
+        height: 0.5rem;
         background-color: white;
         border-radius: 50%;
     }
-}
-
-
-
-
-
-
-
-@media screen and (min-width:1300px) {
 
     .sec07 p {
         flex-direction: row;
@@ -362,5 +353,9 @@ footer {
     .sec01 p {
         mix-blend-mode: overlay;
         text-shadow: 0 2rem 8rem black;
+    } .sec07 span.big {
+        font-size: clamp(6.2rem, 16vw, 14rem);
+        margin-top: calc(clamp(9rem, 30vw, 25rem) * -1);
+        max-width: 37rem;
     }
 }
