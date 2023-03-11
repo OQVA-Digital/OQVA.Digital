@@ -113,8 +113,10 @@ section.bgimg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 3rem 3rem 1rem #191919;
+    /* box-shadow: 0 3rem 3rem 1rem #191919; */
     z-index: 9;
+    -webkit-mask-image: linear-gradient(0deg, transparent, white calc(0% + var(--mask-distance)));
+    margin-bottom: calc(var(--mask-distance) * -1);
 } .sec01 p {
     font-size: clamp(4rem, 22vw, 21rem);
     font-weight: 400;
@@ -128,7 +130,7 @@ section.bgimg {
     background-attachment: fixed;
     z-index: 8;
 } .sec02 {
-    padding: clamp(5rem, 24vw, 10rem) 0 clamp(5rem, 15vw, 7rem) 0;
+    padding: calc(clamp(5rem, 24vw, 10rem) + var(--mask-distance)) 0 clamp(5rem, 15vw, 7rem) 0;
 } .sec02 span.big {
     font-size: clamp(2.4em, 3vw, 3em);
     margin: clamp(3rem, 10vw, 5rem) auto;
@@ -162,7 +164,7 @@ p span.big {
 } .sec03 {
     padding: clamp(3rem, 33vw, 13rem) 0;
 } .sec03 span.big {
-    font-size: clamp(5em, 15vw, 13em);
+    font-size: clamp(5em, 28vw, 13em);
     text-transform: uppercase;
     letter-spacing: clamp(0.5rem, 2vw, 4rem);
     text-align: center;
@@ -181,7 +183,7 @@ p span.big {
 } .sec04 span.big {
 
 } .sec04 {
-    padding: calc(clamp(5rem, 30vw, 10rem) + 4rem) 0 clamp(5rem, 50vw, 35rem) 0;
+    padding: calc(clamp(5rem, 30vw, 10rem) + 4rem) 0 clamp(5rem, 70vw, 35rem) 0;
 }
 
 
@@ -254,7 +256,7 @@ p span.big {
 } .sec07 span.big {
     font-size: clamp(6.2rem, 16vh, 9rem);
     line-height: 1;
-    margin-top: calc(clamp(9rem, 30vh, 17rem) * -1);
+    margin-top: calc(clamp(9rem, 34vh, 17rem) * -1);
     mix-blend-mode: difference;
     color: white;
     text-transform: uppercase;
