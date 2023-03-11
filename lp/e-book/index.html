@@ -130,6 +130,30 @@
         }
 
         window.addEventListener('mousemove', moveCursor)
+
+        window.addEventListener('mousedown', moveCursor)
+
+        
+        const clickables = document.querySelectorAll('a, button')
+
+        const cursorDot = document.querySelector('.cursor div')
+
+        for(i=0;i<clickables.length;i++) {
+            clickables[i].addEventListener('mouseover', function() {
+                cursorDot.style.transform = 'scale(10)'
+            })
+
+            clickables[i].addEventListener('mouseout', function() {
+                cursorDot.style.transform = 'scale(1)'
+            })
+        }
+
+        document.body.addEventListener('mousedown', function() {
+                cursorDot.style.transform = 'scale(3)'
+        })
+        document.body.addEventListener('mouseup', function() {
+                cursorDot.style.transform = 'scale(1)'
+        })
     </script>
 </body>
 </html>

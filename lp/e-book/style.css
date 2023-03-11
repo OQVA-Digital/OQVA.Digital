@@ -258,7 +258,7 @@ p span.big {
     mix-blend-mode: difference;
     color: white;
     text-transform: uppercase;
-    max-width: 42rem;
+    max-width: 34rem;
 }
 
 .sec07 .ctnr {
@@ -337,10 +337,12 @@ footer {
         height: 0.5rem;
         background-color: white;
         border-radius: 50%;
+        transition: transform 0.1s ease;
     }
 
     .sec07 p {
         flex-direction: row;
+        justify-content: space-between;
     } .sec07 .left {
         max-width: 40rem;
     }
@@ -354,11 +356,7 @@ footer {
         mix-blend-mode: overlay;
         text-shadow: 0 2rem 8rem black;
     } .sec07 span.big {
-        
-font-size: clamp(6.2rem, 16vw, 14rem);
-        
-margin-top: calc(clamp(9rem, 30vw, 25rem) * -1);
-        
-max-width: 37rem;
+        font-size: clamp(6.2rem, 16vw, 14rem);
+        margin-top: calc(clamp(9rem, 30vw, 25rem) * -1);
     }
 }
