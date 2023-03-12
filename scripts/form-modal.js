@@ -2,6 +2,7 @@
 
 // NETLIFY FORM
 
+const allInputs = document.querySelectorAll('input, textarea')
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,9 +27,13 @@ const handleSubmit = (event) => {
   function success() {
     formBt.innerHTML = 'Form successfully sent!'
 
+    for(i=0;i<allInputs.length;i++) {
+        allInputs[i].value = ""
+    }
+
     setTimeout(() => {
         checkContactModal()
-    }, 1000);
+    }, 1500);
   }
 
 
