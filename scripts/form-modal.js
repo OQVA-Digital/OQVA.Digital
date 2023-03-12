@@ -36,7 +36,7 @@ const handleSubmit = (event) => {
   let isContactShowing = false;
 
   const outArea = document.querySelector('.out_area')
-  const contactBt = document.querySelectorAll('.contact_bt')
+  const contactBts = document.querySelectorAll('.contact_bt')
   const contactSec = document.querySelector('.form_ctnr')
 
   function checkContactModal() {
@@ -57,8 +57,8 @@ const handleSubmit = (event) => {
     }
   }
 
-  for(i=0;i<contactBt.length;i++) {
-    contactBt[i].addEventListener('click', checkContactModal)
+  for(i=0;i<contactBts.length;i++) {
+    contactBts[i].addEventListener('click', checkContactModal)
   }
 
   outArea.addEventListener('click', checkContactModal)

@@ -7,10 +7,10 @@
     --dark3:#30302d;
     --c1:#d1cb03;
 
-    --width1: clamp(13rem, 85vw, 54rem);
+    --width1: clamp(13rem, 85vw, 60rem);
     --width2: clamp(13rem, 85vw, 80rem);
 
-    --mask-distance: 6rem;
+    --mask-distance: 4rem;
  }
 
 
@@ -76,13 +76,13 @@ body:not(.lp_body)::-webkit-scrollbar-thumb {
 
 .cta {
     background-color: var(--dark1);
-    padding: 0.9rem 1rem 0.6rem;
+    padding: 1rem 1.4rem 0.8rem;
     display: inline-block;
     margin-top: 1rem;
     color: var(--light);
     border-radius: 0.3rem;
     line-height: 1;
-    font-size: clamp(1rem, 4.4vw, 1.2rem);
+    font-size: clamp(1rem, 4.4vw, 1.3rem);
     border: 0.1rem solid var(--dark2);
     /* box-shadow: 0 1rem 1rem -0.6rem #3338; */
     position: sticky;
@@ -104,8 +104,8 @@ section.bgimg {
 .txtshadow {text-shadow: 0 0.1rem var(--dark1), 0 -0.1rem var(--dark1), -0.1rem 0 var(--dark1), 0.1rem 0 var(--dark1);filter: drop-shadow(0 0 0.3rem var(--dark1));}
 
 .bgimg.sec01 {
-    height: clamp(40rem, 160vw, 91vh);
-    height: clamp(40rem, 160vw, 91lvh);
+    height: clamp(40rem, 200vw, 91vh);
+    height: clamp(40rem, 200vw, 91lvh);
     background-position: bottom;
     background-image: url(../../assets/e-book/bg01.jpg);
     background-image: -webkit-image-set(url(../../assets/e-book/bg01.jpg) 1x, url(../../assets/e-book/bg01.webp) 1x);
@@ -118,10 +118,11 @@ section.bgimg {
     -webkit-mask-image: linear-gradient(0deg, transparent, white calc(0% + var(--mask-distance)));
     margin-bottom: calc(var(--mask-distance) * -1);
 } .sec01 p {
-    font-size: clamp(4rem, 22vw, 21rem);
+    font-size: clamp(4rem, 22vw, 23rem);
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: clamp(0.5rem, 2vw, 1rem);
+    user-select: none;
 }
 
 .bgimg.sec02 {
@@ -130,7 +131,7 @@ section.bgimg {
     background-attachment: fixed;
     z-index: 8;
 } .sec02 {
-    padding: calc(clamp(5rem, 24vw, 10rem) + var(--mask-distance)) 0 clamp(5rem, 15vw, 7rem) 0;
+    padding: calc(clamp(5rem, 24vw, 10rem) + var(--mask-distance)) 0 clamp(5rem, 25vw, 7rem) 0;
 } .sec02 span.big {
     font-size: clamp(2.4em, 3vw, 3em);
     margin: clamp(3rem, 10vw, 5rem) auto;
@@ -183,7 +184,7 @@ p span.big {
 } .sec04 span.big {
 
 } .sec04 {
-    padding: calc(clamp(5rem, 30vw, 10rem) + 4rem) 0 clamp(5rem, 70vw, 35rem) 0;
+    padding: calc(clamp(5rem, 30vw, 12rem) + 4rem) 0 clamp(5rem, 70vw, 33rem) 0;
 }
 
 
@@ -202,7 +203,7 @@ p span.big {
     font-size: clamp(2em, 15vw, 7.5em);
     line-height: 1;
     text-transform: uppercase;
-    margin-top: calc(clamp(7rem, 85vw, 28rem) * -1);
+    margin-top: calc(clamp(7rem, 69vw, 28rem) * -1);
     max-width: 60rem;
     margin-bottom: 3rem;
     letter-spacing: clamp(0.2rem, 2vw, 1rem);
@@ -220,8 +221,8 @@ p span.big {
     justify-content: center;
     align-items: center;
 } .sec06 {
-    height: 100vh;
-    height: 100lvh;
+    height: 130vh;
+    height: clamp(130lvh, 100vw, 160lvh);
     display: flex;
 } .sec06 p {
     text-align: center;
@@ -229,19 +230,21 @@ p span.big {
     font-size: 1.15em;
     letter-spacing: 0.3rem;
     position: relative;
-    top: calc(clamp(0rem, calc(20vw - 10rem), 15rem) * -1);
+    top: -15lvh;
 } .sec06 span.big {
     text-transform: uppercase;
     font-size: clamp(2rem, 12vw, 7rem);
     transform: translateY(15%);
     letter-spacing: clamp(0.3rem, 1vw, 1rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
 }
 
 
 .sec07 {
     background-color: #EEE;
     color: var(--dark1);
-    padding: clamp(5rem, 13vw, 7rem) 0 clamp(5rem, 13vw, 7rem) 0;
+    padding: clamp(5rem, 13vw, 6rem) 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,9 +321,9 @@ footer {
 
 
 @media screen and (min-width:1200px) {
-    body, label, input, textarea, body .form_ctnr form button {
+    /* body, label, input, textarea, body .form_ctnr form button {
         cursor: none;
-    }
+    } */
     .cursor {
         display: flex;
         width: 4rem;
@@ -339,7 +342,7 @@ footer {
         height: 0.5rem;
         background-color: white;
         border-radius: 50%;
-        transition: transform 0.1s ease;
+        transition: transform 0.1s ease-out;
     }
 
     .sec07 p {
