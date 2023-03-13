@@ -33,9 +33,11 @@
 
     <section class="bgimg sec01">
         <p class="reveal">Imagine</p>
+
+        <a href="#s2" class="arrow"></a>
     </section>
 
-    <section class="bgimg sec02">
+    <section class="bgimg sec02" id="s2">
         <div class="ctnr">
             <p class="reveal">for a moment, that you are standing at the edge of a vast, uncharted universe, a place where the only limits are the ones you impose upon yourself.
 
@@ -44,9 +46,11 @@
             <span class="right reveal">to live your life on your own terms, to create a persona that is uniquely your own. It's an intoxicating feeling, one that fills you with a sense of possibility and adventure, and as you step forward, you can't help but feel a thrill of excitement in your chest.</span>
             </p>
         </div>
+
+        <a href="#s3" class="arrow"></a>
     </section>
 
-    <section class="bgimg sec03">
+    <section class="bgimg sec03" id="s3">
         <div class="ctnr">
             <p>
                 <span class="txtshadow reveal">The first thing you notice is the sheer amount of</span>
@@ -55,11 +59,12 @@
                 
                 <span class="right txtshadow reveal">that goes into creating your identity. Every decision you make, from the food you eat to the clothes you wear, is a deliberate and purposeful choice, one that will shape the way others see you. It's like building a sculpture, slowly chipping away at the excess until all that remains is a work of art that reflects your true self.</span>
             </p>
-            <!-- <a class="cta contact_bt">Book a Free Consultation</a> -->
         </div>
+
+        <a href="#s4" class="arrow"></a>
     </section>
 
-    <section class="bgimg sec04">
+    <section class="bgimg sec04" id="s4">
         <div class="ctnr">
             <p class="reveal">It's not just about the things you do, but also the things you don't do. You must make sacrifices, give up the parts of yourself that don't fit with the image you want to project, in order to make room for the things that do. It's a painful process, one that requires a level of honesty and introspection that is often uncomfortable. But the rewards are worth it - the sense of clarity and purpose that comes from knowing who you truly are is unlike anything you've ever experienced.</p>
         </div>
@@ -73,20 +78,23 @@
             </p>
     
             <p><span class="right txtshadow reveal">There may be times when the weight of your own expectations can feel crushing, when you question whether you're really living up to your true potential. But even in those moments, there's a sense of excitement, of possibility, of knowing that you're on a journey of self-discovery that will never truly be complete.</span></p>
-            <!-- <a class="cta contact_bt">Book a Free Consultation</a> -->
+
+            <a href="#s6" class="arrow"></a>
         </div>
     </section>
 
-    <section class="bgimg sec06">
+    <section class="bgimg sec06" id="s6">
         <div class="ctnr">
             <p><span class="big reveal">The truth is;</span> <span class="reveal">you have lived in this world your entire life.</span></p>
         </div>
+
+        <a href="#s7" class="arrow"></a>
     </section>
 
     <section class="sec07">
         <div class="ctnr">
             <p>
-                <span class="big">All of us have.</span>
+                <span class="big" id="s7">All of us have.</span>
                 <span>
                     <span class="left reveal">But from this moment you have something that many others don't - agency, the power to create your own destiny.</span>
                     <a class="cta contact_bt" role="button">Book a Free Consultation</a>
@@ -114,7 +122,7 @@
 
 
     <div class="form_ctnr">
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="identity-form-contact" method="POST" data-netlify="true">
             <p>
               <label>Your Name: <input type="text" name="name" required/></label>
             </p>
@@ -175,7 +183,7 @@
                     cursorDot.style.transform = 'scale(1)'
             })
 
-            const allHoverEls = document.querySelectorAll('body, label, input, textarea, body .form_ctnr form button')
+            const allHoverEls = document.querySelectorAll('body, label, input, textarea, body .form_ctnr form button, a')
 
             for(i=0;i<allHoverEls.length;i++) {
                 allHoverEls[i].style.cursor = "none"
@@ -188,10 +196,7 @@
         ScrollReveal().reveal('.reveal', {
             duration: 1500,
             easing: 'ease',
-            distance: '30px',
-            viewOffset: {
-                bottom: 100
-            }
+            distance: '40px'
         });
 
 
@@ -199,7 +204,7 @@
             if (document.readyState == "complete") {
                 setTimeout(() => {
                     if(scrollY < 300) {
-                            scrollTo(null, window.innerHeight / 1.1)
+                            scrollTo(null, window.innerHeight)
                     }
                 }, 2000);
             }

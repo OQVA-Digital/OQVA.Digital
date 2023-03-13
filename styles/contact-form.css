@@ -67,6 +67,8 @@
     border-radius: 0.3rem;
     color: var(--c1);
     cursor: pointer;
+} .form_ctnr a {
+    font-size: 1.2rem;
 }
 
 .out_area {

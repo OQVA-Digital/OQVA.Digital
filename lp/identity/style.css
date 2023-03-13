@@ -20,11 +20,11 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 
 @font-face {
     font-family: BrilkSans;
-    src: url("../../assets/e-book/BRILK-SANS-LIGHT.TTF");
+    src: url("../../assets/lp/identity/BRILK-SANS-LIGHT.TTF");
     font-weight: 200;
 }  @font-face {
     font-family: BrilkSans;
-    src: url("../../assets/e-book/BRILK-EXTRABLACK.TTF");
+    src: url("../../assets/lp/identity/BRILK-EXTRABLACK.TTF");
     font-weight: 800;
 }
 
@@ -42,8 +42,8 @@ html {
     font-size: clamp(0.9rem, 3.9vw, 1.4rem);
     background-color: var(--dark1);
     font-family: 'BrilkSans', sans-serif;
-    letter-spacing: 0.06rem;
-    line-height: 1.5;
+    letter-spacing: 0.07rem;
+    line-height: 1.6;
 }
 
 a {
@@ -74,21 +74,7 @@ body:not(.lp_body)::-webkit-scrollbar-thumb {
     display:none;
 }
 
-.cta {
-    background-color: var(--dark1);
-    padding: 1rem 1.4rem 0.8rem;
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--light);
-    border-radius: 0.3rem;
-    line-height: 1;
-    font-size: clamp(1rem, 4.4vw, 1.3rem);
-    border: 0.1rem solid var(--dark2);
-    /* box-shadow: 0 1rem 1rem -0.6rem #3338; */
-    position: sticky;
-    bottom: 1.5rem;
-    box-sizing: border-box;
-}
+
 
 section.bgimg {
     width:100%;
@@ -104,11 +90,11 @@ section.bgimg {
 .txtshadow {text-shadow: 0 0.1rem var(--dark1), 0 -0.1rem var(--dark1), -0.1rem 0 var(--dark1), 0.1rem 0 var(--dark1);filter: drop-shadow(0 0 0.3rem var(--dark1));}
 
 .bgimg.sec01 {
-    height: clamp(40rem, 200vw, 91vh);
-    height: clamp(40rem, 200vw, 91lvh);
+    height: clamp(40rem, 200vw, 100vh);
+    height: clamp(40rem, 200vw, 100lvh);
     background-position: bottom;
-    background-image: url(../../assets/e-book/bg01.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg01.jpg) 1x, url(../../assets/e-book/bg01.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg01.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg01.jpg) 1x, url(../../assets/lp/identity/bg01.webp) 1x);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,18 +111,45 @@ section.bgimg {
     user-select: none;
 }
 
+.arrow {
+    width: clamp(2rem, 10vw, 3rem);
+    height: clamp(6rem, 30vw, 9rem);
+    background-image: url(../../assets/lp/identity/arrow.png);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/arrow.png) 1x, url(../../assets/lp/identity/arrow.webp) 1x);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: bottom;
+} .sec01 .arrow {
+    right: clamp(2rem, 15vw, 38rem);
+    bottom: 6rem;
+} .sec02 .arrow {
+    bottom: clamp(1rem, 9vw, 9rem);
+    left: calc(10vw - 1rem);
+} .sec03 .arrow {
+    right: 9vw;
+    bottom: clamp(3rem, 14vw, 12rem);
+} .sec04 .arrow {
+    
+} .sec05 .arrow {
+    bottom: 0;
+} .sec06 .arrow {
+    transform: translateY(50%);
+}
+
 .bgimg.sec02 {
-    background-image: url(../../assets/e-book/bg01-stretched.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg01-stretched.jpg) 1x, url(../../assets/e-book/bg01-stretched.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg01-stretched.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg01-stretched.jpg) 1x, url(../../assets/lp/identity/bg01-stretched.webp) 1x);
     background-attachment: fixed;
     z-index: 8;
 } .sec02 {
-    padding: calc(clamp(5rem, 24vw, 10rem) + var(--mask-distance)) 0 clamp(5rem, 25vw, 7rem) 0;
+    padding: calc(clamp(5rem, 24vw, 9rem) + var(--mask-distance)) 0 clamp(5rem, 25vw, 8rem) 0;
 } .sec02 span.big {
     font-size: clamp(2.4em, 3vw, 3em);
     margin: clamp(3rem, 10vw, 5rem) auto;
     width: 90%;
-    max-width: 35rem;
+    max-width: 38rem;
 }
 
 p span.big {
@@ -147,7 +160,7 @@ p span.big {
 } p span.right {
     text-align: right;
     display: block;
-    max-width: 34rem;
+    max-width: clamp(17rem, 65vw, 36rem);
     margin: 0 0 0 auto;
 } p span.left {
     text-align: left;
@@ -157,13 +170,13 @@ p span.big {
 
 
 .bgimg.sec03 {
-    background-image: url(../../assets/e-book/bg02.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg02.jpg) 1x, url(../../assets/e-book/bg02.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg02.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg02.jpg) 1x, url(../../assets/lp/identity/bg02.webp) 1x);
     background-position: bottom;
     -webkit-mask-image: linear-gradient(0deg, transparent, white calc(0% + var(--mask-distance)));
     z-index: 8;
 } .sec03 {
-    padding: clamp(3rem, 33vw, 13rem) 0;
+    padding: clamp(3rem, 62vw, 13rem) 0;
 } .sec03 span.big {
     font-size: clamp(5em, 28vw, 13em);
     text-transform: uppercase;
@@ -171,26 +184,28 @@ p span.big {
     text-align: center;
     margin: 1rem 0 6rem;
     mix-blend-mode: difference;
+    line-height: 1;
 }
 
 
 .bgimg.sec04 {
-    background-image: url(../../assets/e-book/bg02-stretched.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg02-stretched.jpg) 1x, url(../../assets/e-book/bg02-stretched.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg02-stretched.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg02-stretched.jpg) 1x, url(../../assets/lp/identity/bg02-stretched.webp) 1x);
     background-attachment: fixed;
     background-position: top;
     text-align: center;
     margin-top: calc(var(--mask-distance) * -1);
+    font-size: 1.1em;
 } .sec04 span.big {
 
 } .sec04 {
-    padding: calc(clamp(5rem, 30vw, 12rem) + 4rem) 0 clamp(5rem, 70vw, 33rem) 0;
+    padding: calc(clamp(5rem, 30vw, 14rem) + 4rem) 0 clamp(5rem, 70vw, 30rem) 0;
 }
 
 
 .bgimg.sec05 {
-    background-image: url(../../assets/e-book/bg03.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg03.jpg) 1x, url(../../assets/e-book/bg03.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg03.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg03.jpg) 1x, url(../../assets/lp/identity/bg03.webp) 1x);
     background-position: top right;
 } .sec05 {
     padding: clamp(5rem, 63vw, 12rem) 0;
@@ -200,10 +215,10 @@ p span.big {
     margin: 0 auto;
     position: relative;
 } .sec05 span.big {
-    font-size: clamp(2em, 15vw, 7.5em);
+    font-size: clamp(2em, 15vw, 7em);
     line-height: 1;
     text-transform: uppercase;
-    margin-top: calc(clamp(7rem, 69vw, 28rem) * -1);
+    margin-top: calc(clamp(7rem, 69vw, 26rem) * -1);
     max-width: 60rem;
     margin-bottom: 3rem;
     letter-spacing: clamp(0.2rem, 2vw, 1rem);
@@ -212,8 +227,8 @@ p span.big {
 
 
 .bgimg.sec06 {
-    background-image: url(../../assets/e-book/bg04.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg04.jpg) 1x, url(../../assets/e-book/bg04.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg04.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg04.jpg) 1x, url(../../assets/lp/identity/bg04.webp) 1x);
     background-attachment: fixed;
     /* -webkit-mask-image: linear-gradient(180deg, transparent, white calc(0% + var(--mask-distance))); */
     /* margin-top: calc(var(--mask-distance) * -1); */
@@ -222,7 +237,7 @@ p span.big {
     align-items: center;
 } .sec06 {
     height: 130vh;
-    height: clamp(130lvh, 100vw, 160lvh);
+    height: clamp(130lvh, 100vw, 140lvh);
     display: flex;
 } .sec06 p {
     text-align: center;
@@ -230,7 +245,7 @@ p span.big {
     font-size: 1.15em;
     letter-spacing: 0.3rem;
     position: relative;
-    top: -15lvh;
+    top: calc(clamp(30lvh, 50vw, 40lvh) / -2);
 } .sec06 span.big {
     text-transform: uppercase;
     font-size: clamp(2rem, 12vw, 7rem);
@@ -259,11 +274,12 @@ p span.big {
 } .sec07 span.big {
     font-size: clamp(6.2rem, 16vh, 9rem);
     line-height: 1;
-    margin-top: calc(clamp(9rem, 34vh, 17rem) * -1);
+    margin-top: calc((clamp(9rem, 34vh, 17rem) + 5rem) * -1);
     mix-blend-mode: difference;
     color: white;
     text-transform: uppercase;
     max-width: 34rem;
+    padding-top: 5rem;
 }
 
 .sec07 .ctnr {
@@ -274,8 +290,8 @@ p span.big {
 
 
 .bgimg.sec08 {
-    background-image: url(../../assets/e-book/bg05.jpg);
-    background-image: -webkit-image-set(url(../../assets/e-book/bg05.jpg) 1x, url(../../assets/e-book/bg05.webp) 1x);
+    background-image: url(../../assets/lp/identity/bg05.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/bg05.jpg) 1x, url(../../assets/lp/identity/bg05.webp) 1x);
     display: flex;
     background-position: top;
 } .sec08 {
@@ -293,6 +309,23 @@ p span.big {
 }
 
 
+.cta {
+    background-color: var(--dark1);
+    padding: 1rem 1.4rem 0.8rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--light);
+    border-radius: 0.3rem;
+    line-height: 1;
+    font-size: clamp(1rem, 4.4vw, 1.3rem);
+    border: 0.1rem solid var(--dark2);
+    /* box-shadow: 0 1rem 1rem -0.6rem #3338; */
+    position: sticky;
+    bottom: 1.5rem;
+    box-sizing: border-box;
+}
+
+
 footer {
     width: 100%;
     height: 50vh;
@@ -300,6 +333,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../../assets/lp/identity/footerbg.jpg);
+    background-image: -webkit-image-set(url(../../assets/lp/identity/footerbg.jpg) 1x, url(../../assets/lp/identity/footerbg.webp) 1x);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: 100% 30lvh;
 } .logo_anchor {
     width: clamp(10rem, 62vw, 20rem);
 }
@@ -362,6 +400,29 @@ footer {
         text-shadow: 0 2rem 8rem black;
     } .sec07 span.big {
         font-size: clamp(6.2rem, 16vw, 14rem);
-        margin-top: calc(clamp(9rem, 30vw, 25rem) * -1);
+        margin-top: calc((clamp(9rem, 30vw, 25rem) + 5rem) * -1);
     }
 }
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1920px) {
+    html {
+        font-size:20px;
+    }
+  } @media (min-width:2440px) {
+    html {
+        font-size:24px;
+    }
+  } @media (min-width:3000px) {
+    html {
+        font-size:32px;
+    }
+  }
